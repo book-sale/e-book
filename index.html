@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود و ثبت‌نام</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="signup-form" class="form-container">
+            <h2>ثبت‌نام</h2>
+            <form id="signup" onsubmit="return signUp(event)">
+                <label for="email">ایمیل:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="username">نام کاربری:</label>
+                <input type="text" id="signup-username" name="username" required>
+
+                <label for="password">پسورد:</label>
+                <input type="password" id="signup-password" name="password" required>
+                <div class="show-password">
+                    <input type="checkbox" id="show-signup-password" onclick="togglePassword('signup-password')">
+                    <label for="show-signup-password">نمایش پسورد</label>
+                </div>
+
+                <button type="submit">ثبت‌نام</button>
+            </form>
+            <p>قبلاً ثبت‌نام کرده‌اید؟ <a href="#" onclick="toggleForms()">ورود</a></p>
+        </div>
+
+        <div id="login-form" class="form-container" style="display:none;">
+            <h2>ورود</h2>
+            <form id="login" onsubmit="return login(event)">
+                <label for="login-username">نام کاربری:</label>
+                <input type="text" id="login-username" name="username" required>
+
+                <label for="login-password">پسورد:</label>
+                <input type="password" id="login-password" name="password" required>
+                <div class="show-password">
+                    <input type="checkbox" id="show-login-password" onclick="togglePassword('login-password')">
+                    <label for="show-login-password">نمایش پسورد</label>
+                </div>
+
+                <button type="submit">ورود</button>
+            </form>
+            <p>حساب کاربری ندارید؟ <a href="#" onclick="toggleForms()">ثبت‌نام</a></p>
+        </div>
+
+        <div id="error-message" class="error-message" style="display:none;">
+            <p>⚠️ نام کاربری یا پسورد اشتباه است!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

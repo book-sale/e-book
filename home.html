@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>صفحه اصلی</title>
+    <link rel="stylesheet" href="home-style.css">
+</head>
+<body>
+    <!-- هدر -->
+    <header>
+        <h1>فروشگاه آنلاین من</h1>
+        <input type="text" id="search" placeholder="جستجوی محصولات...">
+    </header>
+
+    <!-- دسته‌بندی‌ها -->
+    <nav>
+        <ul>
+            <li><a href="#">همه محصولات</a></li>
+            <li><a href="#">الکترونیکی</a></li>
+            <li><a href="#">پوشاک</a></li>
+            <li><a href="#">لوازم خانگی</a></li>
+            <li><a href="#">کتاب‌ها</a></li>
+        </ul>
+    </nav>
+
+    <!-- گالری محصولات -->
+    <section class="product-gallery">
+        <div class="product">
+            <img src="images/product1.jpg" alt="محصول ۱">
+            <h3>گوشی هوشمند مدل A12</h3>
+            <p>قیمت: ۵,۰۰۰,۰۰۰ تومان</p>
+            <button onclick="addToCart('گوشی هوشمند مدل A12', 5000000)">افزودن به سبد خرید</button>
+        </div>
+
+        <div class="product">
+            <img src="images/product2.jpg" alt="محصول ۲">
+            <h3>لپ‌تاپ حرفه‌ای X Pro</h3>
+            <p>قیمت: ۲۵,۰۰۰,۰۰۰ تومان</p>
+            <button onclick="addToCart('لپ‌تاپ حرفه‌ای X Pro', 25000000)">افزودن به سبد خرید</button>
+        </div>
+
+        <div class="product">
+            <img src="images/product3.jpg" alt="محصول ۳">
+            <h3>کتاب "راز موفقیت"</h3>
+            <p>قیمت: ۱۵۰,۰۰۰ تومان</p>
+            <button onclick="addToCart('کتاب راز موفقیت', 150000)">افزودن به سبد خرید</button>
+        </div>
+    </section>
+
+    <!-- سبد خرید -->
+    <div id="cart">
+        <button id="close-cart" onclick="closeCart()">بستن</button>
+        <h3>سبد خرید</h3>
+        <div id="cart-items">
+            <!-- آیتم‌ها در اینجا نمایش داده می‌شوند -->
+        </div>
+        <button id="checkout">پرداخت</button>
+    </div>
+
+    <script src="home-script.js"></script>
+</body>
+</html>
